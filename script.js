@@ -1,5 +1,5 @@
 // Typing effect
-const text = "Full Stack Developer | Problem Solver";
+const text = "Full Stack Developer | CSE Student | Problem Solver";
 let i = 0;
 
 function typing() {
