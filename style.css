@@ -103,3 +103,52 @@ footer {
   padding: 20px;
   color: #777;
 }
+/* BACKGROUND */
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  font-family: 'Inter', sans-serif;
+}
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* SUBTITLE */
+.subtitle {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* SOCIAL LINKS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #6366F1;
+  font-weight: 500;
+}
+
+/* CARD GLASS */
+.card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-5px);
+}
