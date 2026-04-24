@@ -1,8 +1,18 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f9fafb;
   color: #111;
+
+  /* Animated gradient */
+  background: linear-gradient(-45deg, #eef2ff, #e0e7ff, #f8fafc, #eef2ff);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* NAV */
@@ -10,14 +20,8 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  background: white;
-  border-bottom: 1px solid #eee;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
 }
 
 /* HERO */
@@ -26,13 +30,18 @@ nav a {
   padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 40px;
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 30px;
+  display: inline-block;
 }
 
-.typing {
-  color: #6366F1;
-  margin-top: 10px;
+/* TEXT */
+.subtitle {
+  color: #555;
 }
 
 /* BUTTONS */
@@ -53,6 +62,17 @@ nav a {
   color: #6366F1;
 }
 
+/* SOCIAL ICONS */
+.socials img {
+  width: 28px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
 /* SECTIONS */
 .about, .projects, .contact {
   padding: 60px 20px;
@@ -69,15 +89,33 @@ nav a {
 
 /* CARD */
 .card {
-  background: white;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid #eee;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* DIVIDER */
+.divider {
+  height: 2px;
+  width: 60%;
+  margin: 40px auto;
+  background: linear-gradient(to right, transparent, #6366F1, transparent);
+  opacity: 0;
+  transform: scaleX(0.5);
+  animation: dividerAnim 1s ease forwards;
+}
+
+@keyframes dividerAnim {
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 /* FORM */
@@ -102,53 +140,4 @@ footer {
   text-align: center;
   padding: 20px;
   color: #777;
-}
-/* BACKGROUND */
-body {
-  background: linear-gradient(135deg, #eef2ff, #f8fafc);
-  font-family: 'Inter', sans-serif;
-}
-
-/* GLASS EFFECT */
-.glass {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(15px);
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-/* HERO */
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* SUBTITLE */
-.subtitle {
-  margin-top: 10px;
-  color: #555;
-}
-
-/* SOCIAL LINKS */
-.socials {
-  margin-top: 20px;
-}
-
-.socials a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #6366F1;
-  font-weight: 500;
-}
-
-/* CARD GLASS */
-.card {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
-}
-
-/* HOVER */
-.card:hover {
-  transform: translateY(-5px);
 }
