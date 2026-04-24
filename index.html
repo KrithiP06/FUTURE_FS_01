@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Krithi Prakash | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krithi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Krithi Prakash</h1>
-    <p>Aspiring Software Developer</p>
-</header>
+<nav>
+  <h1>Krithi Prakash</h1>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate CSE student focused on building real-world projects and solving problems.</p>
+<section class="hero">
+  <h1>Hi, I'm Krithi 👋</h1>
+  <p class="typing"></p>
+
+  <div class="buttons">
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="#" class="btn secondary">Resume</a>
+  </div>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React.js</li>
-        <li>MongoDB</li>
-    </ul>
+<section class="about">
+  <h2>About</h2>
+  <p>
+    I am a full stack developer passionate about building clean and user-friendly web applications.
+  </p>
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
+<section id="projects" class="projects">
+  <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Fraud Detector App</h3>
-        <p>Mobile app to detect digital fraud using smart algorithms.</p>
+  <div class="grid">
+
+    <!-- Portfolio -->
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Clean and responsive personal website to showcase my work.</p>
+      <small>HTML, CSS, JavaScript</small>
     </div>
 
-    <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>Personal website to showcase projects and skills.</p>
+    <!-- CRM -->
+    <div class="card">
+      <h3>CRM System</h3>
+      <p>Lead management app to track and organize clients.</p>
+      <small>React, Node.js (concept)</small>
     </div>
 
+    <!-- Fraud Detector -->
+    <div class="card">
+      <h3>Fraud Detector App</h3>
+      <p>Mobile-focused app to detect and prevent digital fraud activities.</p>
+      <small>UI/UX + Concept Project</small>
+    </div>
+
+    <!-- Calculator -->
+    <div class="card">
+      <h3>Calculator App</h3>
+      <p>Simple calculator for basic arithmetic operations.</p>
+      <small>JavaScript</small>
+    </div>
+
+    <!-- To-Do App -->
+    <div class="card">
+      <h3>To-Do List App</h3>
+      <p>Task management app with add, delete, and mark complete features.</p>
+      <small>JavaScript</small>
+    </div>
+
+    <!-- Weather App -->
+    <div class="card">
+      <h3>Weather App</h3>
+      <p>Fetches real-time weather data using API.</p>
+      <small>JavaScript + API</small>
+    </div>
+
+  </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-        <input type="text" placeholder="Krithi Prakash" required>
-        <input type="email" placeholder="19736krithi@gmail.com" required>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
+
+<footer>
+  © 2026 Krithi Prakash
+</footer>
 
 <script src="script.js"></script>
 </body>
