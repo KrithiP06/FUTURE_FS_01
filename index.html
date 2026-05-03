@@ -56,3 +56,93 @@
 </html>
 
 
+<!-- ===================== styles.css ===================== -->
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass {
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+}
+
+.section {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* ===================== script.js ===================== */
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+// simple reveal animation
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('.card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            card.style.opacity = 1;
+            card.style.transform = 'translateY(0)';
+        }
+    });
+});
