@@ -1,8 +1,23 @@
 body {
   margin: 0;
   font-family: system-ui;
-  background: radial-gradient(circle at top, #0f2027, #203a43, #0a0a0a);
+  background: linear-gradient(135deg, #0f2027, #203a43, #000);
   color: white;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* NAV */
@@ -19,35 +34,29 @@ body {
 }
 
 /* HERO */
-.hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 40px;
-}
-
 .hero h1 {
   font-size: 60px;
 }
 
 .hero p {
-  color: #aaa;
+  color: #bbb;
 }
 
-/* SECTIONS */
-.section {
-  padding: 80px 40px;
-  max-width: 800px;
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 /* CARDS */
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
 .card {
-  background: rgba(255,255,255,0.05);
   padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
@@ -55,33 +64,54 @@ body {
   transform: translateY(-5px);
 }
 
+/* ICONS */
+i {
+  margin-bottom: 10px;
+  color: cyan;
+}
+
 /* SKILLS */
 .skills span {
-  display: inline-block;
-  margin: 6px;
+  margin: 5px;
   padding: 8px 12px;
   border: 1px solid #555;
   border-radius: 6px;
+  display: inline-block;
 }
 
-/* CONTACT */
-form {
+/* NEWSLETTER */
+.newsletter {
+  text-align: center;
+  padding: 40px;
+}
+
+.form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-input, textarea {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 6px;
+.form input {
+  padding: 12px;
+  width: 60%;
   border: none;
+  border-radius: 8px 0 0 8px;
 }
 
-button {
-  padding: 10px;
+.form button {
+  padding: 12px;
   background: cyan;
   border: none;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* ANIMATION */
