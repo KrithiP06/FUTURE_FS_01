@@ -3,55 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krithi | Portfolio</title>
+    <title>Krithi Prakash Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-    <h1 class="logo">Krithi.</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<!-- Navbar -->
+<nav class="navbar">
+    <h2 class="logo">KP</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
+<!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="glass">
-        <h2>Hi, I'm Krithi 👋</h2>
-        <p>Aspiring Software Engineer | AI Enthusiast</p>
-        <button onclick="scrollToSection('projects')">View Work</button>
+    <div class="hero-content">
+        <img src="https://via.placeholder.com/150" class="profile-img">
+        <h1>Krithi Prakash</h1>
+        <h3 id="typing"></h3>
+        <p>
+            I am a passionate Computer Science Engineering student interested in building real-world applications.
+        </p>
+        <div class="buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
     </div>
 </section>
 
+<!-- About -->
 <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I am a Computer Science Engineering student passionate about building futuristic web and AI applications.</p>
-</section>
-
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Fraud Detector</h3>
-            <p>AI-based mobile app to detect digital fraud.</p>
-        </div>
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Modern glassmorphism portfolio design.</p>
-        </div>
+    <div class="card">
+        <p><b>B.E. Computer Science Engineering</b></p>
+        <p>Mangalore Institute of Technology and Engineering (2024 – Present)</p>
+        <p>
+            I enjoy learning new technologies and solving problems creatively.
+        </p>
     </div>
 </section>
 
+<!-- Skills -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">C</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">Machine Learning</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">Portfolio Website</div>
+        <div class="card">To-Do App</div>
+        <div class="card">Java Calculator</div>
+        <div class="card">ML Demo</div>
+    </div>
+</section>
+
+<!-- Contact -->
 <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>Email: krithi@example.com</p>
+    <p>Karnataka, India</p>
+    <p><a href="https://www.linkedin.com/in/krithi-prakash-511a63334" target="_blank">LinkedIn</a></p>
+    <p><a href="https://github.com/KrithiP06" target="_blank">GitHub</a></p>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
 </section>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
