@@ -1,17 +1,13 @@
 // Reveal animation
 const reveals = document.querySelectorAll(".reveal");
 
-function reveal() {
+window.addEventListener("scroll", () => {
   reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
       el.classList.add("active");
     }
   });
-}
-
-window.addEventListener("scroll", reveal);
-
+});
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -22,9 +18,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// Icons
+lucide.createIcons();
 
-// Contact form (user input)
-document.getElementById("contactForm").addEventListener("submit", function(e){
+// Form
+document.getElementById("contactForm").addEventListener("submit", e => {
   e.preventDefault();
-  alert("Message sent successfully!");
+  alert("Subscribed successfully!");
 });
