@@ -1,106 +1,97 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Georgia", serif;
-}
-
 body {
-  background: #f4f1ee;
-  color: #7a1f1f;
+  margin: 0;
+  font-family: system-ui;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #0a0a0a);
+  color: white;
 }
 
 /* NAV */
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
-  border-bottom: 1px solid #d3cfcf;
+  padding: 20px 40px;
 }
 
-.nav-links a {
-  margin-left: 30px;
+.links a {
+  margin-left: 20px;
+  color: #aaa;
   text-decoration: none;
-  color: #7a1f1f;
-}
-
-.btn-outline {
-  border: 1px solid #7a1f1f;
-  padding: 5px 12px;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 60px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
 }
 
 .hero h1 {
-  font-size: 80px;
-  line-height: 1.1;
-  letter-spacing: -2px;
+  font-size: 60px;
 }
 
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px 0;
-  border-top: 1px solid #d3cfcf;
-  border-bottom: 1px solid #d3cfcf;
+.hero p {
+  color: #aaa;
 }
 
-.stats div {
-  font-size: 24px;
-}
-
-.stats span {
-  display: block;
-  font-size: 12px;
-  color: #999;
-}
-
-/* SECTION */
+/* SECTIONS */
 .section {
-  padding: 80px 60px;
+  padding: 80px 40px;
+  max-width: 800px;
 }
 
-h2 {
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.project {
-  border: 1px solid #d3cfcf;
-  padding: 30px;
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
-.project:hover {
-  background: #7a1f1f;
-  color: white;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* ABOUT */
-.about {
-  background: #7a1f1f;
-  color: white;
-  padding: 80px 60px;
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 6px;
 }
 
 /* CONTACT */
-.contact a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #7a1f1f;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.contact a:hover {
-  text-decoration: underline;
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
